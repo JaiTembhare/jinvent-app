@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const {
   registerUser,
   loginUser,
@@ -11,7 +12,6 @@ const {
   resetPassword,
 } = require("../controllers/userController");
 const protect = require("../middelWares/authMiddelware");
-const router = express.Router();
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);
